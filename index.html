@@ -491,6 +491,30 @@
             font-size: 1rem;
         }
         
+        /* Resource Links */
+        .resource-link {
+            color: var(--accent-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 4px;
+            padding: 2px 8px;
+            background: rgba(14, 165, 233, 0.1);
+            border-radius: 4px;
+            transition: all 0.3s;
+            word-break: break-all;
+        }
+        
+        .resource-link:hover {
+            background: rgba(14, 165, 233, 0.25);
+            color: #fff;
+        }
+        
+        .resource-link::before {
+            content: "🔗 ";
+            font-size: 0.8rem;
+        }
+        
         /* Navigation Bar */
         .nav-bar {
             position: fixed;
@@ -888,6 +912,12 @@
                 padding-left: 25px;
             }
             
+            /* Resource links */
+            .resource-link {
+                font-size: 0.8rem;
+                padding: 2px 6px;
+            }
+            
             /* Slide number */
             .slide-number {
                 bottom: 10px;
@@ -983,7 +1013,7 @@
             <button class="nav-btn" id="prevBtn" onclick="goToSlide(currentSlide - 1)">
                 <span class="arrow">←</span><span class="btn-text"> Prev</span>
             </button>
-            <span class="slide-indicator" id="slideIndicator">1 / 22</span>
+            <span class="slide-indicator" id="slideIndicator">1 / 23</span>
             <button class="nav-btn" id="nextBtn" onclick="goToSlide(currentSlide + 1)">
                 <span class="btn-text">Next </span><span class="arrow">→</span>
             </button>
@@ -2098,8 +2128,85 @@
         <span class="slide-number">21</span>
     </section>
 
-    <!-- Slide 22: Thank You -->
-    <section class="slide slide-title" id="slide-22">
+    <!-- Slide 22: Resources & References -->
+    <section class="slide slide-content" id="slide-22">
+        <h2>Resources & References</h2>
+        <p>Key sources and research cited in this presentation.</p>
+        
+        <div class="two-column" style="margin-top: 2rem;">
+            <div class="column">
+                <h3>📚 Foundational Research</h3>
+                <ul class="list-styled">
+                    <li><strong>GEO: Generative Engine Optimization</strong> — Aggarwal, P., Murahari, V., et al. (2023). Princeton University & Georgia Tech.<br><a href="https://arxiv.org/abs/2311.09735" target="_blank" class="resource-link">arxiv.org/abs/2311.09735</a></li>
+                    <li><strong>Schema.org Structured Data</strong> — W3C Community Group standard for structured markup<br><a href="https://schema.org/" target="_blank" class="resource-link">schema.org</a></li>
+                    <li><strong>llms.txt Specification</strong> — Emerging standard for LLM-readable site documentation<br><a href="https://llmstxt.org/" target="_blank" class="resource-link">llmstxt.org</a></li>
+                    <li><strong>Wikidata Knowledge Graph</strong> — Free knowledge base for entity disambiguation<br><a href="https://www.wikidata.org/" target="_blank" class="resource-link">wikidata.org</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;">📊 Industry Reports & Statistics</h3>
+                <ul class="list-styled">
+                    <li><strong>Gartner</strong> — Prediction: 25% decline in traditional search volume by 2026-2028<br><a href="https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026" target="_blank" class="resource-link">gartner.com/newsroom</a></li>
+                    <li><strong>Statcounter GlobalStats</strong> — Search engine market share data<br><a href="https://gs.statcounter.com/search-engine-market-share" target="_blank" class="resource-link">gs.statcounter.com</a></li>
+                    <li><strong>Similarweb</strong> — ChatGPT traffic & usage statistics<br><a href="https://www.similarweb.com/website/chat.openai.com/" target="_blank" class="resource-link">similarweb.com</a></li>
+                    <li><strong>Forrester Research</strong> — B2B buyer AI usage studies<br><a href="https://www.forrester.com/research/" target="_blank" class="resource-link">forrester.com/research</a></li>
+                    <li><strong>Salesforce State of the Connected Consumer</strong> — Consumer AI adoption<br><a href="https://www.salesforce.com/resources/research-reports/state-of-the-connected-customer/" target="_blank" class="resource-link">salesforce.com/resources</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>🔧 Technical Documentation</h3>
+                <ul class="list-styled">
+                    <li><strong>OpenAI Crawler Documentation</strong> — GPTBot, OAI-SearchBot, ChatGPT-User specs<br><a href="https://platform.openai.com/docs/bots" target="_blank" class="resource-link">platform.openai.com/docs/bots</a></li>
+                    <li><strong>Anthropic Crawler Info</strong> — ClaudeBot, Claude-SearchBot documentation<br><a href="https://docs.anthropic.com/" target="_blank" class="resource-link">docs.anthropic.com</a></li>
+                    <li><strong>Perplexity Bot Documentation</strong> — PerplexityBot crawler behavior<br><a href="https://docs.perplexity.ai/guides/perplexitybot" target="_blank" class="resource-link">docs.perplexity.ai/guides/perplexitybot</a></li>
+                    <li><strong>Google Search Central</strong> — AI Overviews, Google-Extended documentation<br><a href="https://developers.google.com/search/docs/crawling-indexing/google-extended" target="_blank" class="resource-link">developers.google.com/search</a></li>
+                    <li><strong>Microsoft Bing Webmaster</strong> — Schema & LLM guidance<br><a href="https://www.bing.com/webmasters/" target="_blank" class="resource-link">bing.com/webmasters</a></li>
+                    <li><strong>Cloudflare Radar</strong> — AI bot detection research<br><a href="https://radar.cloudflare.com/" target="_blank" class="resource-link">radar.cloudflare.com</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;">⚖️ Legal & Regulatory</h3>
+                <ul class="list-styled">
+                    <li><strong>EU AI Act</strong> — Regulation 2024/1689<br><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" target="_blank" class="resource-link">eur-lex.europa.eu (Official Text)</a></li>
+                    <li><strong>GDPR</strong> — Regulation (EU) 2016/679<br><a href="https://gdpr.eu/" target="_blank" class="resource-link">gdpr.eu</a></li>
+                    <li><strong>robots.txt Standard</strong> — Robots Exclusion Protocol<br><a href="https://www.robotstxt.org/" target="_blank" class="resource-link">robotstxt.org</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card-grid" style="margin-top: 2rem;">
+            <div class="card">
+                <h3>📈 Conversion & Traffic Data</h3>
+                <ul class="list-styled">
+                    <li><strong>Authoritas AI Overview Study</strong> — AI traffic & CTR analysis<br><a href="https://www.authoritas.com/blog" target="_blank" class="resource-link">authoritas.com/blog</a></li>
+                    <li><strong>SparkToro</strong> — Zero-click search studies<br><a href="https://sparktoro.com/blog/" target="_blank" class="resource-link">sparktoro.com/blog</a></li>
+                    <li><strong>Semrush Sensor</strong> — AI Overviews tracking<br><a href="https://www.semrush.com/sensor/" target="_blank" class="resource-link">semrush.com/sensor</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🤖 AI Platform Research</h3>
+                <ul class="list-styled">
+                    <li><strong>OpenAI Blog</strong> — ChatGPT updates & capabilities<br><a href="https://openai.com/blog" target="_blank" class="resource-link">openai.com/blog</a></li>
+                    <li><strong>Google AI Blog</strong> — Gemini & AI Overviews<br><a href="https://blog.google/technology/ai/" target="_blank" class="resource-link">blog.google/technology/ai</a></li>
+                    <li><strong>Perplexity AI Blog</strong> — AI search innovations<br><a href="https://www.perplexity.ai/hub" target="_blank" class="resource-link">perplexity.ai/hub</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🔬 Emerging Research</h3>
+                <ul class="list-styled">
+                    <li><strong>Model Collapse</strong> — Shumailov, I., et al. (2023)<br><a href="https://arxiv.org/abs/2305.17493" target="_blank" class="resource-link">arxiv.org/abs/2305.17493</a></li>
+                    <li><strong>RAG Systems</strong> — Lewis, P., et al. (2020) NeurIPS<br><a href="https://arxiv.org/abs/2005.11401" target="_blank" class="resource-link">arxiv.org/abs/2005.11401</a></li>
+                    <li><strong>E-E-A-T Guidelines</strong> — Google Quality Rater Guidelines<br><a href="https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf" target="_blank" class="resource-link">Google QRG PDF</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="highlight-box" style="margin-top: 2rem;">
+            <p><strong>Note:</strong> GEO is a rapidly evolving field. Statistics and platform behaviors change frequently. Always verify current data from primary sources. Many metrics cited are industry estimates based on aggregated research and may vary by sector.</p>
+        </div>
+        <span class="slide-number">22</span>
+    </section>
+
+    <!-- Slide 23: Thank You -->
+    <section class="slide slide-title" id="slide-23">
         <span class="version-badge">GEO Tracker v1.0</span>
         <h1>The brands that start measuring today will dominate AI visibility tomorrow.</h1>
         <p class="subtitle">GEO isn't optional anymore. It's the new visibility layer. Start now — early movers capture citation share while competition is low.</p>
@@ -2122,7 +2229,7 @@
                 <span class="stat-label">Early mover visibility advantage</span>
             </div>
         </div>
-        <span class="slide-number">22</span>
+        <span class="slide-number">23</span>
     </section>
 
     <footer class="footer-note">
